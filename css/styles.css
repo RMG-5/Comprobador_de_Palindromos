@@ -1,0 +1,191 @@
+/* ********** ********** ********** ********** ********** ********** ********** */
+/* HOJA DE ESTILOS "COMPROBADOR DE PALINDROMOS" */
+/* ********** ********** ********** ********** ********** ********** ********** */
+
+/* INSTRUCCIONES GENERALES. */
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+    font-family: Tahoma;
+    font-size: 1.8rem;
+    scroll-behavior: smooth;
+}
+
+@font-face{	
+    font-family: 'TitanOne-Regular';
+    src: url('../font/TitanOne-Regular.ttf');
+}
+
+html {     
+    position: relative;  
+    font-size: 62.5%;
+    background: white;
+}
+
+/* FORMATO PAGINA WEB. */
+body {    
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: 2.5rem;
+    background: rgba(0, 155, 255, 0.1);  
+    box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.2);  
+}
+
+h1 {
+    padding: 0 1rem 1rem;
+    font-family: 'TitanOne-Regular';
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+p {
+    margin: 2rem 0;
+}
+
+.especial {
+    padding-left: 1rem;
+    font-family: serif;
+    border-left: 0.8rem solid rgb(0, 155, 255);
+}
+
+.especial strong {
+    font-family: serif;
+}
+
+.centrado {
+    margin-bottom: 0.7rem;
+    text-align: center;
+}
+
+.poema {
+    margin: 0.5rem 2rem;
+}
+
+.derecha {
+    font-family: serif;
+    font-weight: bold;
+    text-align: right;
+}
+
+li {
+    margin-left: 4rem;
+    padding: 0 1rem 0.5rem 0;
+    list-style: square;
+}
+
+hr {
+    height: 0.2rem;
+    margin: 2rem 0 1rem;
+    background: rgb(0, 155, 255);        
+    border: 0.1rem solid rgb(0, 155, 255);
+}
+
+textarea {
+    outline: none;
+    display: block;
+    width: 100%;
+    height: 4em;
+    max-width: 100%;
+    margin: 0 auto 2.5rem;
+    padding: 0.5rem 1rem;
+    font-family: serif;
+    border: 0.1rem dotted rgb(0, 155, 255);
+    border-radius: 0.5rem;
+    resize: vertical;
+}
+
+textarea:focus {
+    border: 0.1rem solid rgb(0, 100, 255);
+}
+
+.contenedor {
+    width: 100%;
+    min-height: 5rem;
+    margin: 0 auto 2.5rem;
+    padding: 0.5rem 1rem;
+    font-family: serif;
+    background: white;
+    border: 0.1rem solid rgb(0, 100, 255);
+    border-radius: 0.5rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background: rgb(0, 155, 255);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(0, 100, 255);
+}
+
+button:active {
+    background: rgb(0, 155, 255);
+}
+
+.resetear-campos {
+    background: rgb(255, 0, 0);
+}
+
+.resetear-campos:hover {
+    background: rgb(200, 0, 0);
+}
+
+.resetear-campos:active {
+    background: rgb(255, 0, 0);
+}
+
+/* LOGO <R/>. */
+#logo {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    height: 5rem;
+    width: 5rem;
+    background-image: url("../img/logo-r-mono.svg");
+    background-size: contain;
+    background-position: center;   
+    background-repeat: no-repeat;
+    filter: opacity(50%);
+}
+
+/*  BOTON SUBIR.  */
+#subir {
+    position: fixed;
+    bottom: 1rem;
+    right: 7rem;
+    height: 5rem;
+    width: 5rem;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(50, 50, 50, 0.55);
+    background: rgba(150, 150, 150, 0.35);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    z-index: 5;
+}
+
+#subir:hover {
+    color: white;
+    background: hsla(225, 95%, 45%, 1.00);
+}
+
+#subir:active {
+    color: rgba(50, 50, 50, 0.55);
+    background: rgba(150, 150, 150, 0.35);
+}
+
+/* ********** ********** ********** ********** ********** ********** ********** */
+/* ********** ********** ********** ********** ********** ********** ********** */

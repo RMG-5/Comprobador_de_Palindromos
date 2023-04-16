@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<!-- ********** ********** ********** ********** ********** ********** ********** -->
+<!-- ********** ********** ********** ********** ********** ********** ********** -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="Palíndromo, JavaScript, HTML, CSS" />
+        <meta name="description" content="Aplicacion WEB para comprobar palíndromos" />  
+        <meta name="author" content="Ricardo García - R.M.G." />  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Juguemos con Palíndromos</title>
+        <link href="img/logo-r-color.svg" rel="icon" type="image/x-icon" />
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />        
+    </head>
+<!-- ********** ********** ********** ********** ********** ********** ********** -->
+<!-- ********** ********** ********** ********** ********** ********** ********** -->
+    <body>
+        <h1>Juguemos con Palíndromos</h1>
+
+        <p>¿Sabes que es un palíndromo?</p>
+
+        <p class="especial">La palabra <strong>palíndromo</strong> es de origen griego y viene de la construcción 
+            "palin dromein", es decir, <strong>volver atrás, recorrer a la inversa</strong>, porque se trata 
+            precisamente de eso, de palabras o frases simétricas que se pueden transitar en ambos sentidos. Los 
+            palíndromos numéricos también existen, aunque se conocen como <strong>capicúa.</strong></p>
+
+        <p>El Diccionario de la Real Academia Española define palíndromo como:</p>
+
+        <p class="especial">Palabra o frase cuyas letras están dispuestas de tal manera que resulta la misma leída 
+            de izquierda a derecha que de derecha a izquierda; por ejemplo: <em><strong>anilina; dábale arroz a la 
+            zorra el abad.</strong></em></p>
+        
+        <hr/>
+        <p>Ahora que ya sabes que es un palíndromo, intenta escribir algunos y haciendo uso de las habilidades con 
+            las que fui dotado, te ayudare a identificarlos.</p>    
+
+        <p class="centrado">Te invito a escribir una palabra o frase y comprobaremos si es un palíndromo:</p>     
+
+        <textarea type="text" name="texto-que-se-revisa" id="texto-que-se-revisa" placeholder=
+        "Intenta escribir un palíndromo..."></textarea>
+
+        <hr/>
+        <p>Puede parecerte extraño, pero los lenguajes de programación y las aplicaciones informáticas, consideramos 
+            como caracteres diferentes a <strong>letras iguales</strong> que incluyen un tipo de <strong>acento 
+            diacrítico,</strong> es decir, para nosotros: <strong>"a, á, à, ä, â, å, ã"</strong> son siete letras 
+            diferentes, por lo que, empezare por remover todos los acentos diacríticos del texto que escribiste.</p>
+
+        <p><strong>NOTA:</strong> no te preocupes, es de mi conocimiento que, en el idioma español, la letra <strong>
+            "ñ"</strong> realmente tiene un significado diferente a la letra <strong>"n",</strong> por lo que, en su 
+            caso, hare una excepción y la dejare tal y como la escribiste.</p>
+
+        <p class="centrado">Haz clic en el siguiente botón para ver el resultado.</p>
+
+        <button id="quitar-acentos">Remover acentos diacríticos</button>
+
+        <p class="centrado">Este es el resultado sin acentos diacríticos:</p>
+
+        <p id="texto-sin-acentos" class="contenedor"></p>
+        
+        <hr/>
+        <p>Regresando a las cosas extrañas, sabias que algunos lenguajes de programación consideran que las <strong>
+            letras mayúsculas</strong> representan algo diferente a sus equivalentes <strong>minúsculas,</strong> 
+            es decir para ellos, <strong>“R”</strong> es diferente a <strong>“r”.</strong> El lenguaje de programación 
+            JavaScript en el cual me crearon es uno de ellos, por lo que, mi siguiente paso será convertir todas las 
+            letras que escribiste en minúsculas.</p>
+
+        <p class="centrado">Haz clic en el siguiente botón para ver el resultado.</p>
+
+        <button id="letras-minusculas">Convertir letras en minúsculas</button>
+
+        <p class="centrado">Este es el resultado con todas las letras en minúsculas:</p>
+
+        <p id="texto-en-minusculas" class="contenedor"></p>
+
+        <hr/>
+        <p>Como siguiente paso eliminare todos aquellos caracteres no alfanuméricos, ya que, en un palíndromo 
+            pierden su significado, por cierto, sabias que, para los lenguajes de programación y las aplicaciones 
+            informáticas, los <strong>espacios en blanco</strong> también son un tipo de carácter, sin embargo, 
+            para ofrecerte un mejor formato, dejare un espacio en blanco entre cada carácter alfanumérico.</p>
+
+        <p class="centrado">Haz clic en el siguiente botón para ver el resultado.</p>
+
+        <button id="eliminar-caracteres">Eliminar caracteres</button>
+
+        <p class="centrado">Este es el resultado eliminando los caracteres no alfanuméricos:</p>
+
+        <p id="solo-alfa-numericos" class="contenedor"></p>
+
+        <hr/>
+        <p>Muy bien, ahora ya solo contamos con los caracteres alfanuméricos, que son los que nos dirán si el texto 
+            escrito es un palíndromo. Mi siguiente paso será invertir el orden de los caracteres, para que puedas 
+            ver lo que dicen al ser leídos de derecha a izquierda.</p>
+
+        <p class="centrado">Haz clic en el siguiente botón para ver el resultado.</p>
+
+        <button id="invertir-caracteres">Invertir sentido del texto</button>
+
+        <p class="centrado">Este es el resultado del texto escrito en sentido contrario:</p>
+
+        <p id="caracteres-invertidos" class="contenedor"></p>
+
+        <hr/>
+        <p>Llegados a este punto, solo resta comparar el texto de los dos últimos recuadros y ver si son iguales, 
+            si es un texto corto puedes identificarlo enseguida, pero si es muy largo quizá no sea tan sencillo, 
+            te invito a presionar el siguiente botón y te diré tu resultado.</p>
+
+        <p class="centrado">Haz clic en el siguiente botón para conocer tu resultado</p>
+
+        <button id="comprobador-palindromo">Comprobar si escribiste un palíndromo</button>
+
+        <p class="centrado">¡Qué crees...!</p>
+
+        <p id="resultado-palindromo" class="contenedor"></p>
+
+        <button class="resetear-campos">Resetear Campos</button>
+
+        <hr/>
+        <p>Si has tenido problemas para encontrar palíndromos, aquí te dejo algunas sugerencias:</p>
+            <ul>
+                <li>Atar a la rata.</li>
+                <li>Salta Lenin el atlas.</li>
+                <li>Amigo, no gima.</li>
+                <li>Átale, demoníaco Caín, o me delata.</li>
+                <li>Anás usó tu auto, Susana.</li>
+                <li>Somos o no somos.</li>
+                <li>Isaac no ronca así.</li>
+                <li>Sé verlas al revés.</li>
+                <li>Amó la paloma.</li>
+                <li>Anita lava la tina.</li>
+                <li>Luz azul.</li>
+                <li>Yo hago yoga hoy.</li>
+                <li>Ana lava lana.</li>
+            </ul>
+        
+        <hr/>
+        <p>Y, para concluir, te dejo este increíble palíndromo en forma de poema, del autor venezolano <strong>Darío 
+            Lancini (1932-2010),</strong> titulado <strong>"Amor Azul".</strong></p>
+        <div class="poema">
+<pre>
+<strong>Amor azul</strong>
+Ramera, de todo te di.
+Mariposa colosal, sí,
+yo de todo te di.
+Poda la rosa, Venus.
+El átomo como tal
+es un evasor alado.
+Pide, todo te doy: isla,
+sol, ocaso, pirámide.
+Todo te daré: mar, luz, aroma.
+</pre>
+        </div>  
+
+        <hr/>
+        <p class="derecha">Gracias por jugar, ¡hasta luego!</p>
+
+        <div id="logo"></div> 
+        <script src="js/index.js"></script>
+    </body>
+    <a href="#" id="subir">^</a>
+<!-- ********** ********** ********** ********** ********** ********** ********** -->
+<!-- ********** ********** ********** ********** ********** ********** ********** -->
+</html>
